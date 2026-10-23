@@ -1,17 +1,48 @@
-# cadastro_app
+# Cadastro App
 
-A new Flutter project.
+Tela de cadastro de usuário desenvolvida em Flutter, com validação de campos e feedback visual por SnackBar.
 
-## Getting Started
+## Funcionalidades
 
-This project is a starting point for a Flutter application.
+- Campos: nome completo, e-mail, CPF, telefone, senha e confirmação de senha
+- Todos os campos obrigatórios
+- E-mail validado com `@` e RegExp
+- Senha com no mínimo 6 caracteres e botão de mostrar/ocultar
+- Confirmação de senha com checagem de igualdade
+- CPF (limite de 11 dígitos) e telefone aceitam somente números
+- Erros exibidos abaixo de cada campo inválido
+- SnackBar verde no sucesso e vermelho quando há campos inválidos
 
-A few resources to get you started if this is your first Flutter project:
+## Estrutura da tela
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+```
+Scaffold
+└── Form
+    └── SingleChildScrollView
+        └── Column
+            ├── TextFormField (nome)
+            ├── TextFormField (e-mail)
+            ├── TextFormField (CPF)
+            ├── TextFormField (telefone)
+            ├── TextFormField (senha)
+            ├── TextFormField (confirmar senha)
+            └── ElevatedButton (CADASTRAR)
+```
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Como executar
+
+```bash
+git clone https://github.com/SEU_USUARIO/cadastro_app.git
+cd cadastro_app
+flutter pub get
+flutter run
+```
+
+## Tecnologias
+
+- Flutter
+- Dart
+
+## Autora
+
+Caroline Xavier - 2312225
